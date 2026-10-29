@@ -3,22 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MechGuard AI | Mechanical Component Risk Engine</title>
-  
-  <!-- Inter Font -->
+  <title>MechGuard AI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  
-  <!-- BubbledotICG-FinePos from OnlineWebFonts -->
   <link href="https://db.onlinewebfonts.com/c/8cb707a9b8a73f8a7403336b861c3074?family=BubbledotICG-FinePos" rel="stylesheet" />
-  
-  <!-- Font Awesome 6.5.2 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="bg">
@@ -28,157 +18,73 @@
   </div>
 
   <div class="page">
-    <!-- Header -->
     <header class="header">
-      <a href="#home" class="logo-btn" aria-label="Home">
-        <img src="assets/logo.webp" alt="MechGuard Logo" width="52" height="52" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fa-solid fa-gear\' style=\'font-size:24px;color:#000\'></i>';" />
+      <a href="#home" class="logo-btn">
+        <i class="fa-solid fa-gear" style="font-size:24px;color:#000"></i>
       </a>
-
       <nav class="nav-pill">
         <a href="#home" class="nav-link active">Home</a>
         <a href="#features" class="nav-link">Features</a>
         <a href="#how-it-works" class="nav-link">How It Works</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
-
-      <!-- 👇 CHANGE THIS URL TO YOUR STREAMLIT APP URL 👇 -->
       <a href="http://localhost:8501" class="sign-in-btn">Launch App</a>
-
-      <button class="burger" aria-label="Menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
       </button>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
-      <h1 class="headline">
-        <span>Intelligence</span>
-        <span>Designed To Evolve</span>
-      </h1>
-
-      <p class="subhead anim" style="--d: 0.28s">
-        Analyze mechanical Bills of Materials for supply chain risks, material scarcity, and manufacturing alternatives using advanced AI.
-      </p>
-
-      <!-- 👇 CHANGE THIS URL TO YOUR STREAMLIT APP URL 👇 -->
-      <a href="http://localhost:8501" class="cta-btn anim" style="--d: 0.4s">Launch BOM Analyzer</a>
+      <h1 class="headline"><span>Intelligence</span><span>Designed To Evolve</span></h1>
+      <p class="subhead">Analyze mechanical Bills of Materials for supply chain risks using advanced AI.</p>
+      <a href="http://localhost:8501" class="cta-btn">Launch BOM Analyzer</a>
     </section>
 
-    <!-- Features Section -->
     <section id="features" class="section">
       <h2 class="section-title">Features</h2>
       <div class="features-grid">
-        <div class="feature-card">
-          <i class="fa-solid fa-microchip"></i>
-          <h3>AI-Powered Analysis</h3>
-          <p>Advanced AI analyzes your BOM for supply chain risks, material availability, and manufacturing constraints in seconds.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fa-solid fa-triangle-exclamation"></i>
-          <h3>Risk Assessment</h3>
-          <p>Identify high-risk components with single-source suppliers, obsolete materials, and long lead times before they impact production.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fa-solid fa-arrows-rotate"></i>
-          <h3>Alternative Sourcing</h3>
-          <p>Get intelligent recommendations for material substitutions, process alternatives, and drop-in replacements.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fa-solid fa-file-export"></i>
-          <h3>Export Reports</h3>
-          <p>Generate comprehensive risk reports in CSV format for stakeholder review and procurement planning.</p>
-        </div>
+        <div class="feature-card"><i class="fa-solid fa-microchip"></i><h3>AI-Powered Analysis</h3><p>Advanced AI analyzes your BOM for supply chain risks in seconds.</p></div>
+        <div class="feature-card"><i class="fa-solid fa-triangle-exclamation"></i><h3>Risk Assessment</h3><p>Identify high-risk components before they impact production.</p></div>
+        <div class="feature-card"><i class="fa-solid fa-arrows-rotate"></i><h3>Alternative Sourcing</h3><p>Get intelligent recommendations for material substitutions.</p></div>
+        <div class="feature-card"><i class="fa-solid fa-file-export"></i><h3>Export Reports</h3><p>Generate comprehensive risk reports in CSV format.</p></div>
       </div>
     </section>
 
-    <!-- How It Works Section -->
     <section id="how-it-works" class="section">
       <h2 class="section-title">How It Works</h2>
       <div class="steps-container">
-        <div class="step">
-          <div class="step-number">1</div>
-          <div class="step-content">
-            <h3>Upload Your BOM</h3>
-            <p>Upload your Bill of Materials in CSV or Excel format. Our parser automatically identifies part numbers, materials, and quantities.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <div class="step-content">
-            <h3>AI Analysis</h3>
-            <p>Our AI engine analyzes each component for supply chain risks, material availability, manufacturing processes, and lifecycle status.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h3>Review Results</h3>
-            <p>View detailed risk assessments, alternative recommendations, and supplier links for every component in your BOM.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-number">4</div>
-          <div class="step-content">
-            <h3>Export & Act</h3>
-            <p>Download your complete risk report and take action on high-risk components before they impact your production timeline.</p>
-          </div>
-        </div>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><h3>Upload Your BOM</h3><p>Upload your Bill of Materials in CSV or Excel format.</p></div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-content"><h3>AI Analysis</h3><p>Our AI engine analyzes each component for supply chain risks.</p></div></div>
+        <div class="step"><div class="step-number">3</div><div class="step-content"><h3>Review Results</h3><p>View detailed risk assessments and alternative recommendations.</p></div></div>
+        <div class="step"><div class="step-number">4</div><div class="step-content"><h3>Export & Act</h3><p>Download your complete risk report and take action.</p></div></div>
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="section">
       <h2 class="section-title">Contact</h2>
       <div class="contact-container">
         <div class="contact-info">
           <h3>Get in Touch</h3>
-          <p>Have questions about MechGuard AI? Need enterprise pricing or custom integrations? We'd love to hear from you.</p>
+          <p>Have questions about MechGuard AI?</p>
           <div class="contact-links">
             <a href="mailto:contact@mechguard.ai"><i class="fa-solid fa-envelope"></i> contact@mechguard.ai</a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-            <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
           </div>
         </div>
         <div class="contact-cta">
           <h3>Ready to Secure Your Supply Chain?</h3>
-          <p>Launch the BOM Analyzer now and get instant risk assessments for your mechanical components.</p>
-          <!-- 👇 CHANGE THIS URL TO YOUR STREAMLIT APP URL 👇 -->
           <a href="http://localhost:8501" class="cta-btn">Launch BOM Analyzer</a>
         </div>
       </div>
     </section>
 
-    <!-- Stats Footer -->
     <footer class="stats">
-      <div class="stat-item anim" style="--d: 0.5s" data-target="120" data-suffix="ms" data-decimals="0">
-        <span class="stat-icon">&lt;</span>
-        <span class="stat-value"><span class="count">0</span><span class="suffix"></span></span>
-        <span class="stat-label">Analysis Time</span>
-      </div>
-
-      <div class="stat-item anim" style="--d: 0.58s" data-target="99.9" data-suffix="%" data-decimals="1">
-        <span class="stat-icon">%</span>
-        <span class="stat-value"><span class="count">0</span><span class="suffix"></span></span>
-        <span class="stat-label">Accuracy Rate</span>
-      </div>
-
-      <div class="stat-item anim" style="--d: 0.66s" data-target="50" data-suffix="+" data-decimals="0">
-        <span class="stat-icon">*</span>
-        <span class="stat-value"><span class="count">0</span><span class="suffix"></span></span>
-        <span class="stat-label">Material Standards</span>
-      </div>
-
-      <div class="stat-item anim" style="--d: 0.74s" data-target="2.4" data-suffix="M" data-decimals="1">
-        <span class="stat-icon">#</span>
-        <span class="stat-value"><span class="count">0</span><span class="suffix"></span></span>
-        <span class="stat-label">Parts Audited</span>
-      </div>
+      <div class="stat-item" data-target="120" data-suffix="ms" data-decimals="0"><span class="stat-icon">&lt;</span><span class="stat-value"><span class="count">0</span><span class="suffix"></span></span><span class="stat-label">Analysis Time</span></div>
+      <div class="stat-item" data-target="99.9" data-suffix="%" data-decimals="1"><span class="stat-icon">%</span><span class="stat-value"><span class="count">0</span><span class="suffix"></span></span><span class="stat-label">Accuracy Rate</span></div>
+      <div class="stat-item" data-target="50" data-suffix="+" data-decimals="0"><span class="stat-icon">*</span><span class="stat-value"><span class="count">0</span><span class="suffix"></span></span><span class="stat-label">Material Standards</span></div>
+      <div class="stat-item" data-target="2.4" data-suffix="M" data-decimals="1"><span class="stat-icon">#</span><span class="stat-value"><span class="count">0</span><span class="suffix"></span></span><span class="stat-label">Parts Audited</span></div>
     </footer>
   </div>
 
-  <!-- Mobile Menu Overlay -->
   <div class="menu-overlay" hidden>
     <div class="menu-sheet">
       <nav class="mobile-nav">
@@ -186,7 +92,6 @@
         <a href="#features" class="mobile-link">Features</a>
         <a href="#how-it-works" class="mobile-link">How It Works</a>
         <a href="#contact" class="mobile-link">Contact</a>
-        <!-- 👇 CHANGE THIS URL TO YOUR STREAMLIT APP URL 👇 -->
         <a href="http://localhost:8501" class="mobile-sign-in">Launch App</a>
       </nav>
     </div>
